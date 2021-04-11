@@ -2,8 +2,8 @@ const net = require("net");
 
 const server = net.createServer();
 
-let arr = [];
 let i = 0;
+let arr = [];
 let e = [];
 let finalParse = [];
 
