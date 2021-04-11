@@ -1,32 +1,23 @@
 const net = require("net");
-
 const server = net.createServer();
-
-let i = 0;
-let arr = [];
-let e = [];
-let finalParse = [];
 
 server.on("connection", function (socket) {
   console.log("Fichier XML:");
 
+  let i = 0;
+  let arr = [];
+  let e = [];
+  let finalParse = [];
+
   socket.on("data", (d) => {
     arr.push(d);
     e.push(arr[i].toString());
-    const p1 = e.toString().split(" ");
-    const p2 = p1.toString().split(".");
-    const p3 = p2.toString().split(",");
-    const p4 = p3.toString().split(":");
-    const p5 = p4.toString().split(",");
+
+    const obj = require("./parseClass");
+    const myObj = new obj(e, i);
 
     if (i == 5) {
-      p5.pop();
-      p5.pop();
-      p5.pop();
-      p5.splice(1, 1);
-      p5.splice(2, 1);
-      finalParse = p5;
-      console.log(e);
+      finalParse = myObj.parse();
       console.log(finalParse);
     }
     // // socket.write('hello' + d);
