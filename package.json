@@ -1,30 +1,27 @@
 {
-  "name": "calendarApiNode",
+  "name": "js-server",
   "version": "1.0.0",
-  "description": "",
-  "main": "quickstart.js",
+  "description": "serveur js",
+  "main": "serveur.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node serveur.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Pepinonte/calendarApiNode.git"
+    "url": "git+https://github.com/Pepinonte/JS-Server.git"
   },
-  "keywords": [],
-  "author": "",
+  "author": "christian gros",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Pepinonte/calendarApiNode/issues"
+    "url": "https://github.com/Pepinonte/JS-Server/issues"
   },
-  "homepage": "https://github.com/Pepinonte/calendarApiNode#readme",
-  "dependencies": {
-    "prettier": "^2.2.1"
-  },
+  "homepage": "https://github.com/Pepinonte/JS-Server#readme",
   "devDependencies": {
-    "eslint": "^7.22.0",
+    "eslint": "^7.24.0",
     "eslint-config-airbnb-base": "^14.2.1",
     "eslint-config-prettier": "^8.1.0",
     "eslint-plugin-import": "^2.22.1",
-    "eslint-plugin-prettier": "^3.3.1"
+    "eslint-plugin-prettier": "^3.3.1",
+    "prettier": "^2.2.1"
   }
 }

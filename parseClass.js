@@ -5,13 +5,13 @@ class Parser {
   }
 
   parse() {
-    const p1 = this.arr.toString().split(" ");
-    const p2 = p1.toString().split(".");
-    const p3 = p2.toString().split(",");
-    const p4 = p3.toString().split(":");
-    const p5 = p4.toString().split(",");
+    const p1 = this.arr.toString().split(' ');
+    const p2 = p1.toString().split('.');
+    const p3 = p2.toString().split(',');
+    const p4 = p3.toString().split(':');
+    const p5 = p4.toString().split(',');
 
-    if (this.i == 5) {
+    if (this.i === 5) {
       p5.pop();
       p5.pop();
       p5.pop();
