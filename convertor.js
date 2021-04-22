@@ -1,6 +1,8 @@
 const net = require('net');
 const Obj = require('./parseClass');
 
+let finalParse = [];
+
 const server = net.createServer();
 
 server.on('connection', (socket) => {
@@ -9,7 +11,6 @@ server.on('connection', (socket) => {
   let i = 0;
   const arr = [];
   const e = [];
-  let finalParse = [];
 
   socket.on('data', (d) => {
     arr.push(d);
@@ -29,8 +30,18 @@ server.on('connection', (socket) => {
 server.listen(9000, () => {
   console.log('server listening to truc');
 });
-// const conv = (data) => {
-//   if (data === jour) {
-//     return finalParse[0]
-//   }
-// }
+
+const test = {
+  jourD: finalParse[2],
+  moisD: finalParse[1],
+  anneeD: finalParse[3],
+  heureD: finalParse[4],
+  minD: finalParse[5],
+  secD: finalParse[6],
+  jourF: finalParse[11],
+  moisF: finalParse[9],
+  anneeF: finalParse[12],
+  heureF: finalParse[13],
+  minF: finalParse[14],
+  secF: finalParse[15],
+};
