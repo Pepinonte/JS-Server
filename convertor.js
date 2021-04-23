@@ -45,3 +45,7 @@ const test = {
   minF: finalParse[14],
   secF: finalParse[15],
 };
+
+console.log(finalParse[2]);
+
+module.exports = test;
