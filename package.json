@@ -4,7 +4,10 @@
   "description": "serveur js",
   "main": "serveur.js",
   "scripts": {
-    "start": "node serveur.js"
+    "start": "node ./src/serveur.js",
+    "dev": "nodemon ./src/serveur.js",
+    "lint": "eslint ./src",
+    "lint-fix": "eslint ./src --fix"
   },
   "repository": {
     "type": "git",
