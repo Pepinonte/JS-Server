@@ -4,8 +4,8 @@
   "description": "serveur js",
   "main": "serveur.js",
   "scripts": {
-    "start": "node ./src/serveur.js",
-    "dev": "nodemon ./src/serveur.js",
+    "start": "node ./src/apiAcces.js",
+    "dev": "nodemon ./src/apiAcces.js",
     "lint": "eslint ./src",
     "lint-fix": "eslint ./src --fix"
   },
