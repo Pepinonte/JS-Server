@@ -19,7 +19,6 @@ server.on('connection', (socket) => {
 
     if (i === 5) {
       finalParse = myObj.parse();
-      console.log(finalParse);
     }
     // // socket.write('hello' + d)
     i++;

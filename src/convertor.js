@@ -20,7 +20,7 @@ server.on('connection', (socket) => {
 
     if (i === 5) {
       finalParse = myObj.parse();
-      console.log(finalParse);
+      // console.log(finalParse);
     }
     // // socket.write('hello' + d)
     i++;
@@ -32,20 +32,18 @@ server.listen(9000, () => {
 });
 
 const test = {
-  jourD: finalParse[2],
-  moisD: finalParse[1],
-  anneeD: finalParse[3],
-  heureD: finalParse[4],
-  minD: finalParse[5],
-  secD: finalParse[6],
+  jourD: finalParse[3],
+  moisD: finalParse[2],
+  anneeD: finalParse[4],
+  heureD: finalParse[5],
+  minD: finalParse[6],
+  secD: finalParse[7],
   jourF: finalParse[11],
-  moisF: finalParse[9],
+  moisF: finalParse[10],
   anneeF: finalParse[12],
   heureF: finalParse[13],
   minF: finalParse[14],
   secF: finalParse[15],
 };
-
-console.log(finalParse[2]);
 
 module.exports = test;

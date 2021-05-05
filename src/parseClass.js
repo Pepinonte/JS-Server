@@ -9,7 +9,8 @@ class Parser {
     const p2 = p1.toString().split('.');
     const p3 = p2.toString().split(',');
     const p4 = p3.toString().split(':');
-    const p5 = p4.toString().split(',');
+    const p5 = p4.toString().split('');
+    const p6 = p4.toString().split(',');
 
     if (this.i === 5) {
       p5.pop();
@@ -18,7 +19,7 @@ class Parser {
       p5.splice(1, 1);
       p5.splice(2, 1);
 
-      return p5;
+      return p6;
     }
   }
 }
