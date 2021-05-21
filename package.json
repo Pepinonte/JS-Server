@@ -4,8 +4,8 @@
   "description": "serveur js",
   "main": "serveur.js",
   "scripts": {
-    "start": "node ./src/serveur.js",
-    "dev": "nodemon ./src/serveur.js",
+    "start": "node ./src/apiAcces.js",
+    "dev": "nodemon ./src/apiAcces.js",
     "lint": "eslint ./src",
     "lint-fix": "eslint ./src --fix"
   },
@@ -28,6 +28,7 @@
     "prettier": "^2.2.1"
   },
   "dependencies": {
-    "googleapis": "^72.0.0"
+    "googleapis": "^72.0.0",
+    "nodemon": "^2.0.7"
   }
 }
