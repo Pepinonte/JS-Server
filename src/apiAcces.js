@@ -15,7 +15,7 @@ const oAuth2Client = new OAuth2(
 
 oAuth2Client.setCredentials({
   refresh_token:
-    '1//04HTbz_eXP008CgYIARAAGAQSNwF-L9IrvM7S74otRMpylY4E0SyHK6OG_PGyCYLmbuhdzR546VbuveahPHmvM1TYRstkppaJ_K0',
+    '1//04IEJ_kyZrJP5CgYIARAAGAQSNwF-L9Ir6OZSIioOmMFDx029EZ8IGh1I3w4BYPcbRhB38QUXusAbxpB5SAkqkrmUHNHRR0AbvwM',
 });
 
 const server = net.createServer();
@@ -40,25 +40,26 @@ server.on('connection', (socket) => {
       // console.log(finalParse);
 
       const test = {
-        jourD: finalParse[3],
-        moisD: finalParse[2],
-        anneeD: finalParse[4],
-        heureD: finalParse[5],
-        minD: finalParse[6],
-        secD: finalParse[7],
+        jourD: finalParse[2],
+        moisD: finalParse[1],
+        anneeD: finalParse[3],
+        heureD: finalParse[4],
+        minD: finalParse[5],
+        secD: finalParse[6],
         jourF: finalParse[11],
-        moisF: finalParse[10],
+        moisF: finalParse[9],
         anneeF: finalParse[12],
         heureF: finalParse[13],
         minF: finalParse[14],
         secF: finalParse[15],
       };
 
+      console.log(finalParse);
+      console.log(test);
       /// ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
       // creation du calendrier
 
       const calendar = google.calendar({ version: 'v3', auth: oAuth2Client });
-      console.log(finalParse[2]);
 
       const eventStartTime = new Date(test.anneeD, 4, test.jourD); // creation de la date de depart
       eventStartTime.setHours(test.heureD); // def de l'heure
