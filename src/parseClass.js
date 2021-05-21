@@ -6,24 +6,29 @@ class Parser {
 
   parse() {
     const p1 = this.arr.toString().split(' ');
-    // const p2 = p1.toString().split('.');
-    const p2 = p1.toString().split(',');
-    const da = p2[4].toString().split(':');
-    p2.splice(4, 1);
-    const dd = p2[8].toString().split(':');
-    p2.splice(8, 1);
-    const p3 = p2.toString().split('.');
-    const p4 = `${p3},${da},${dd}`;
-    const pf = p4.toString().split(',');
-    pf.splice(1, 1);
-    pf.splice(5, 1);
-    pf.splice(9, 1);
-    pf.splice(9, 1);
-    pf.splice(9, 1);
-    return pf;
-
-    // const p4 = p3.toString().split(':');
-    // const p5 = p4.toString().split(',');
+    const p2 = p1.toString().split('.');
+    const p3 = p2.toString().split(',');
+    // const p4 = p3.toString().split('');
+    // const p2 = p1.toString().split(',');
+    // const da = p2[4].toString().split(':');
+    // p2.splice(4, 1);
+    // const dd = p2[8].toString().split(':');
+    // p2.splice(8, 1);
+    // const p4 = `${p3},${da},${dd}`;
+    // const pf = p4.toString().split(',');
+    // pf.splice(1, 1);
+    // pf.splice(5, 1);
+    // pf.splice(9, 1);
+    // pf.splice(9, 1);
+    // pf.splice(9, 1);
+    for (let i = 0; i <= p3.length; i++) {
+      if (p3[i] === '') {
+        p3.splice(i, 1);
+      }
+    }
+    const p4 = p3.toString().split(':');
+    const p5 = p4.toString().split(',');
+    return p5;
 
     // if (this.i === 5) {
     //   p5.pop();
