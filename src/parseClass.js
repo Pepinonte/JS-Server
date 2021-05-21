@@ -6,13 +6,6 @@ class Parser {
 
   parse() {
     const p1 = this.arr.toString().split(' ');
-<<<<<<< HEAD
-    const p2 = p1.toString().split('.');
-    const p3 = p2.toString().split(',');
-    const p4 = p3.toString().split(':');
-    const p5 = p4.toString().split('');
-    const p6 = p4.toString().split(',');
-=======
     // const p2 = p1.toString().split('.');
     const p2 = p1.toString().split(',');
     const da = p2[4].toString().split(':');
@@ -28,15 +21,10 @@ class Parser {
     pf.splice(9, 1);
     pf.splice(9, 1);
     return pf;
->>>>>>> parser
 
     // const p4 = p3.toString().split(':');
     // const p5 = p4.toString().split(',');
 
-<<<<<<< HEAD
-      return p6;
-    }
-=======
     // if (this.i === 5) {
     //   p5.pop();
     //   p5.pop();
@@ -46,7 +34,6 @@ class Parser {
 
     //   return p1;
     // }
->>>>>>> parser
   }
 }
 
